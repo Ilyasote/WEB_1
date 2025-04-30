@@ -1,0 +1,194 @@
+<html>
+
+<head>
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Hezkuntzaren Ataria</title>
+
+<style>
+   .login{
+         color: black;
+         background-color: #9EBCC5;
+         border-width: 1px;
+         border-style: solid;
+   }
+</style>
+
+<script language="javascript" src="../util_edu/js/o19Efectos.js"></script>
+
+<script>
+
+	/*if(window.name != "HEZKUNTZA") {
+		window.location.href = "/appcont/control_acceso/portal";
+	} else {
+	
+		window.moveTo(0,0);
+		
+		if (document.all) {
+			var wide = window.screen.availWidth;
+			var high = window.screen.availHeight;
+			resizeTo(wide,high);
+		}
+		
+
+	}*/
+
+	function darFoco()
+	{
+		document.formIdentifica.usr.focus();
+	}
+
+	function funcLogin(){
+	   document.getElementById("btnAceptar").style.visibility='hidden';
+	   document.getElementById("btnAceptar").disabled='true';
+	   capaEspera.className='login';
+	   iniciarEspera("<font size=\"2\" face=\"Arial\"><b>Konektatzen / Conectando<b></FONT>",capaEspera);
+	   document.forms[0].action = "https://www2.hezkuntza.net/r82/r82Login.do";
+	   //document.forms[0].action = "/r79/r79Salto.jsp";
+	   document.forms[0].submit();
+	}
+	
+	
+		function fnNav() {
+			PosX = (screen.width - 632) / 2;
+			PosY = (screen.height - 424) / 2;
+			window.open('navegador.html','nav','menubar=no,toolbar=no,location=no,personalbar=no,scrollbars=no,status=no,resizable=yes,top=' + PosY +',left=' + PosX + ',width=630,height=400');
+		}	
+</script>
+
+
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<map name="area">
+<area shape="RECT" coords="5,5,250,65" a="" href="/hezkuntza" target="_top" title="Hezkuntza">
+<area shape="RECT" coords="85,60,250,95" a="" href="http://www.ej-gv.net" target="_top" title="ejgv">
+</map>
+   <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+         <td>
+										<div style="text-align:center;width:100%">
+										<img src="images/cab_c.jpg" border="" usemap="#map">
+										</div>
+         </td>
+         <td align="right">
+            <table border="0" cellpadding="0" cellspacing="0">
+               <tr>
+                  <td><img src="../util_edu/images/tab_izq.gif" width="40" height="111" align="BOTTOM" border="0"></td>
+                  <td valign="TOP">
+                     <table border="0" cellpadding="0" cellspacing="0" bgcolor="#9EBCC5">
+                        <tr>
+                           <td>
+                              <table border="0" cellpadding="0" cellspacing="0" width="145" background="/appcont/util_edu/images/azul2.gif">
+                                 <tr>
+                                    <td><img src="../util_edu/images/azul.gif" width="3" height="52" align="BOTTOM" border="0"></td>
+                                    <td width="251" background="/appcont/util_edu/images/azul_fondo.gif"><font size="1" color="#000000" face="Verdana, Arial, Helvetica, sans-serif">
+                                       <div id="detalleCentroCabecera" style="position:relative; width:100%; height:52Px; z-index:1; visibility: visible; overflow: auto;">
+                                       <table border="0" cellpadding="0" cellspacing="1" style="FONT-FAMILY: arial; FONT-SIZE: 12px">
+                                          <tr>
+                                             <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif"></font></td>
+                                          </tr>
+                                          <tr>
+                                             <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif"></font></td>
+                                          </tr>
+                                          <tr>
+                                             <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif"></font></td>
+                                          </tr>
+                                       </table>
+                                       </div>
+                                       </font>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr><!--  WIDTH="40" HEIGHT="57" -->
+                           <td bgcolor="#FFFFFF"><img src="../util_edu/images/jakina_emp.gif" align="TOP" border="0"><a href="index_login.html"><img src="../util_edu/images/anidioma_a.gif" width="58" height="57" align="BOTTOM" border="0" name="Image6"></a><!--<A HREF="javascript:ayuda();"><IMG SRC="/util_edu/images/boton2_a.gif" WIDTH="58" HEIGHT="57" ALIGN="BOTTOM" BORDER="0" name="Image7"></a><a href="javascript:void(0);" onclick="javascript:arbolBoton();"><IMG SRC="/util_edu/images/arbol_a.gif" WIDTH="58" HEIGHT="57"
+                              ALIGN="BOTTOM" BORDER="0" name="Image8"></a><A HREF="javascript:top.close();"><IMG SRC="/util_edu/images/b_cerrar_c.gif" WIDTH="58" HEIGHT="57" ALIGN="BOTTOM" BORDER="0" name="Image7" alt="Cerrar / Itxi"></a>--><img src="../util_edu/images/tabmenuvac.gif" width="31" height="57" align="BOTTOM" border="0"></td>
+                        </tr>
+                     </table>
+                  </td>
+                  <td><img src="../util_edu/images/tab_logos.gif" usemap="#area" width="271" height="110" align="BOTTOM" border="0"></td>
+               </tr>
+            </table>
+         </td>
+      </tr>
+   </table>
+<br>
+
+<form action="javascript:funcLogin();" method="POST" name="formIdentifica">
+<input type="hidden" name="url" id="url" value="/portal.htm">
+<input type="hidden" name="aplic" id="aplic" value="">
+<input type="hidden" name="err" id="err" value="/">
+<input type="hidden" name="profnum" id="profnum" value="">
+<input type="hidden" name="url_inicio_cookie" id="url_inicio_cookie" value="/r82/r82IdentificaUsuario.do">
+<!--<input type="hidden" name="profnum" value="FF4HG">-->
+
+<div style="float: left;width: 60%;padding: 0.0em;margin-bottom:0em;margin-top:0em;margin-left:0.2em;margin-right:0.2em;">
+<table width="100%"><tr><td bgcolor="#BED1C7" align="center"><font color="#000080" size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Información Pública</b></font></td></tr></table>
+
+<iframe name="informacionPublica" id="informacionPublica" frameborder="0" width="100%" height="310" src="portal_acceso/r82InformacionPublica_c.html"></iframe>
+</div>
+
+<div style="float: right;width: 38%;padding: 0.0em;margin-bottom:0em;margin-top:0em;margin-left:0.2em;margin-right:0.2em;">
+<table border="1" cellspacing="0" cellpadding="0" bgcolor="#000000" align="center">
+  <tr>
+    <td>
+      <table border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+          <td bgcolor="#FFFFFF">
+            <table border="0" cellpadding="0" cellspacing="10" width="100%">
+              <tr>                 
+                <td align="center"><font face="PrimaSans BT,Verdana,sans-serif" color="black" size="2">
+                   Erabiltzailea egiaztatzea / Validaci&oacute;n de usuario</font></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> 
+            <table border="0" cellpadding="0" cellspacing="8" align="center">
+     
+              <tr> 
+                <td align="center"> 
+                  <table border="0" cellspacing="4" width="100%">
+                    <tr> 
+                      <td align="right" width="50%"><font size="1" face="PrimaSans BT,Verdana,sans-serif"> Erabiltzailea / Usuario
+</font></td>
+                      <td width="50%"><input type="text" name="usr" id="usr" size="20" autocomplete="off"></td>
+					  <td rowspan="2" colspan="2" width="100"></td>					  
+                    </tr>
+                    <tr> 
+                      <td align="right"><font size="1" face="PrimaSans BT,Verdana,sans-serif"> Pasahitza / Contrase&ntilde;a
+   </font></td>
+                      <td> 
+                        <input type="password" name="pwd" id="usr" size="20">
+                      </td>
+                    </tr>                    
+                    <tr> 
+                      <td colspan="2" align="center">
+                            <input type="submit" id="btnAceptar" name="btnAceptar" value="Onartu / Aceptar">
+                            <div id="capaEspera">&nbsp;</div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<div><p style="margin-top:10px">
+<font size="1" face="PrimaSans BT,Verdana,sans-serif"><br>Todas las páginas del Departamento de Educación que se encuentran en un servidor seguro, <b>garantizan la confidencialidad de la información que se intercambia</b> entre su ordenador y dicho servidor. <br>La entidad que certifica la utilización de un servidor seguro, en nuestro caso, es  <a href="http://www.izenpe.eus/s15-home/es/" target="_new">IZENPE</a>, al igual que en el resto de Administraciones Vascas. Por ello, usted debe depositar su confianza en dicha entidad emisora de certificados.<br></font></p>
+<table border="0"><tr><td><a title="Ziurtagirien Deskarga" href="http://servicios.izenpe.com/descarga/descarga_externa_c.htm" target="_new"><img src="images/s15-logo_descargacert.gif" border="0"></a></td><td><font size="1" face="PrimaSans BT,Verdana,sans-serif">Si no tiene instalado estos certificados, al intentar acceder las páginas seguras <a href="javascript:void(fnNav())">le aparecerá la siguiente advertencia</a> (pinchar para ver la advertencia). Ante esta situación, podrá optar entre <b>aceptar el mensaje o descargar los certificados correspondientes</b> (pinchar icono adjunto).<br></font></td></tr><tr><td>&nbsp;</td></tr></table>
+</div>
+
+</div>
+</form>
+</body>
+</html>
+
